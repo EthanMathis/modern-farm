@@ -1,12 +1,11 @@
 import { createPlan } from "./plan.js"
-import { createSoybean } from "./seeds/soybean.js";
+import { plantSeeds } from "./tractor.js";
 import { addPlant, usePlants } from "./field.js"
 
 const yearlyPlan = createPlan();
-console.log(yearlyPlan);
+console.log("plan", yearlyPlan);
 
-const soybeanSeed = createSoybean();
-addPlant(soybeanSeed);
+plantSeeds(yearlyPlan);
 
 const fieldState = usePlants();
-console.log(fieldState);
+console.log("fieldState", fieldState);
